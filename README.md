@@ -37,4 +37,3 @@ Follow these steps to set up and run the MikroTik CHR deployment tool:
    edit .env file
    node server.js
    ```
-# build-mikrotik-chr
