@@ -25,11 +25,15 @@ It builds a bootable image, injects a custom `autorun.scr` script, and writes th
 
 ## 🧰 Requirements
 
+Before you begin, make sure the following tools are installed on your system:
+
+> ✅ This tool is tested and works reliably on **Ubuntu 22.04**, and may also work on other recent Ubuntu versions.
+
 ### ✅ For All Platforms
 
 - **[Node.js](https://nodejs.org/)** (v16 or later)
 - **[Git](https://git-scm.com/)** (for cloning the repository)
-- A remote **Ubuntu-based KVM/QEMU host** with root SSH access
+- A remote **Ubuntu 22 KVM/QEMU host** with root SSH access
 
 ---
 
