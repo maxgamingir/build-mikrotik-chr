@@ -18,7 +18,7 @@ IFACE=$(ip -o -4 route show to default | awk '{print $5}')
 ADDRESS=$(ip -o -4 addr show dev "$IFACE" | awk '{print $4}' | head -n1)
 GATEWAY=$(ip route | grep default | awk '{print $3}')
 echo "/ip address add address=$ADDRESS/32 broadcast=$ADDRESS interface=[/interface ethernet find where name=ether1]
-/ip address add address=$ADDRESS/32 broadcast=$ADDRESS interface=[/interface ethernet find where name=ether1] network=$GATEWAY
+/ip address add address=$ADDRESS broadcast=$ADDRESS interface=[/interface ethernet find where name=ether1] network=$GATEWAY
 /ip route add dst-address=0.0.0.0/0 gateway=$GATEWAY
 /user set 0 name=admin password={password}
 /ip dns set servers={dns}
