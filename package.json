@@ -1,0 +1,38 @@
+{
+  "name": "build-mikrotik-chr",
+  "version": "1.0.0",
+  "description": "Automates the download, configuration, and deployment of MikroTik CHR (Cloud Hosted Router) images using Node.js and SSH. This tool customizes RouterOS settings such as IP address, DNS, user credentials, and license activation, then writes the modified image to a remote KVM/QEMU host automatically.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "lint": "echo \"No linter configured\"",
+    "test": "echo \"No tests configured\""
+  },
+  "keywords": [
+    "mikrotik",
+    "chr",
+    "routeros",
+    "qemu",
+    "automation",
+    "ssh",
+    "cloud-init",
+    "nodejs"
+  ],
+  "author": "MaxGaming.ir",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MaxGaming-ir/build-mikrotik-chr.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MaxGaming-ir/build-mikrotik-chr/issues"
+  },
+  "homepage": "https://github.com/MaxGaming-ir/build-mikrotik-chr#readme",
+  "dependencies": {
+    "dotenv": "^17.0.0",
+    "ssh2": "^1.16.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
