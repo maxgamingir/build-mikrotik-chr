@@ -53,6 +53,7 @@ async function createReplacedStream() {
 		.replace(/{dns}/g, env.config.dns)
 		.replace(/{licence-account}/g, env.Mikrotiklicence.account)
 		.replace(/{licence-password}/g, env.Mikrotiklicence.password)
+		.replace(/{server-ip}/g, env.host.host)
 		.replace(/{extraConfigs}/g, env.config.extraConfigs);
 
 	return Readable.from([content]);

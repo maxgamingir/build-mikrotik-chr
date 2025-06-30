@@ -17,8 +17,8 @@ mount /dev/nbd0p2 /mnt && \
 IFACE=$(ip -o -4 route show to default | awk '{print $5}')
 ADDRESS=$(ip -o -4 addr show dev "$IFACE" | awk '{print $4}' | head -n1)
 GATEWAY=$(ip route | grep default | awk '{print $3}')
-echo "/ip address add address=$ADDRESS/32 broadcast=$ADDRESS interface=[/interface ethernet find where name=ether1]
-/ip address add address=$ADDRESS broadcast=$ADDRESS interface=[/interface ethernet find where name=ether1] network=$GATEWAY
+echo "/ip address add address={server-ip}/32 broadcast={server-ip} interface=[/interface ethernet find where name=ether1]
+/ip address add address={server-ip} broadcast={server-ip} interface=[/interface ethernet find where name=ether1] network=$GATEWAY
 /ip route add dst-address=0.0.0.0/0 gateway=$GATEWAY
 /user set 0 name=admin password={password}
 /ip dns set servers={dns}
@@ -44,7 +44,10 @@ echo "Warming up sleep" && \
 sleep 1 && \
 echo "Writing raw image, this will take time" && \
 zcat /mnt/chr-extended.gz | pv > /dev/vda && \
+echo "Mikrotik IP: {server-ip}" && \
+echo "Mikrotik User: root" && \
 echo "Don't forget your password: {password}" && \
+echo "*****************Powered by MaxGaming.ir*****************" && \
 echo "Sleep 5 seconds (if lucky)" && \
 sleep 5 || true && \
 echo "sync disk" && \
