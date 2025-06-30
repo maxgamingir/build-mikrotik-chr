@@ -56,11 +56,12 @@ Follow these steps to set up and run the MikroTik CHR deployment tool:
 
 1. **Clone the repository and install dependencies**
 
+   > Before running the project, rename `env.example` to `.env`, then open it and fill in the required configuration values.
+
    ```bash
    git clone https://github.com/maxgamingir/build-mikrotik-chr.git
    cd build-mikrotik-chr
    npm install
    cp env.example .env
-   edit .env file
    node server.js
    ```
