@@ -23,6 +23,29 @@ It builds a bootable image, injects a custom `autorun.scr` script, and writes th
 
 ---
 
+## 🧰 Requirements
+
+### ✅ For All Platforms
+
+- **[Node.js](https://nodejs.org/)** (v16 or later)
+- **[Git](https://git-scm.com/)** (for cloning the repository)
+- A remote **Ubuntu-based KVM/QEMU host** with root SSH access
+
+---
+
+### 💻 Windows Installation Guide
+
+#### 🔧 Install Node.js:
+
+1. Go to: https://nodejs.org/
+2. Download the **LTS version** for Windows
+3. Run the installer and complete setup
+4. Verify installation:
+   ```powershell
+   node -v
+   npm -v
+   ```
+
 ## ⚙️ Usage
 
 Follow these steps to set up and run the MikroTik CHR deployment tool:
